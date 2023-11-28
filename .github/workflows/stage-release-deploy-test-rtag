@@ -1,4 +1,4 @@
-name: 'Deploy release to stage test'
+name: 'Deploy release to stage test rtag'
 
 on:
     workflow_dispatch:
