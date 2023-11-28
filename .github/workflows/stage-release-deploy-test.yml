@@ -77,7 +77,7 @@ jobs:
                   python3 setup.py build
 
             - name: show version number
-               run: |
+              run: |
                    echo "full version number: ${FULL_VERSION_NUMBER}"
                    echo "version number: $version_number"
                    echo ""
