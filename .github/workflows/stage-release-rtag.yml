@@ -89,6 +89,6 @@ jobs:
               run: |
                    echo "full version number: $full_ver_num"
                    echo "version number: $version_number"
-                   echo "jobid step ref for FVN: ${{ python-build.FULL_VERSION_NUMBER }}
+                   echo "jobid step ref for FVN: ${{ steps.python-build.FULL_VERSION_NUMBER }}
                    echo ""
                    git describe --tags
