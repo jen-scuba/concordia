@@ -91,6 +91,6 @@ jobs:
                    echo "full version number after writing to named var on github_env: $full_ver_num"
                    echo "version number: $version_number"
                    
-                   echo "try jobid step ref for FVN: ${{ steps.python-build.FULL_VERSION_NUMBER }}
+                   echo "try jobid step ref for FVN: ${{ steps.python-build.FULL_VERSION_NUMBER }}"
                    echo ""
                    git describe --tags
