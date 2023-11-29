@@ -74,6 +74,8 @@ jobs:
                   pipenv install --dev --system --deploy
 
                   FULL_VERSION_NUMBER="$(pipenv run python -m setuptools_scm)"
+                  echo "full_ver_num=$(echo "${FULL_VERSION_NUMBER}" >> $GITHUB_ENV
+                  
                   # echo "version_number=$(echo "${FULL_VERSION_NUMBER}" | cut -d '+' -f 1)" >> $GITHUB_ENV
                   HOTFIX_VERSION_NUMBER="$(git describe --tags)"
                   echo "version_number=$(echo "${HOTFIX_VERSION_NUMBER}" | cut -d '-' -f 1 | cut -c 2- )" >> $GITHUB_ENV
@@ -85,7 +87,8 @@ jobs:
 
             - name: show version number
               run: |
-                   echo "full version number: $FULL_VERSION_NUMBER"
+                   echo "full version number: $full_ver_num"
                    echo "version number: $version_number"
+                   echo "jobid step ref for FVN: ${{ python-build.FULL_VERSION_NUMBER }}
                    echo ""
                    git describe --tags
